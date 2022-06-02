@@ -1,0 +1,6 @@
+set validation for age, email and phone inputs
+
+using canvas API
+----------------------
+draw outline of a boat
+draw outline of a star
