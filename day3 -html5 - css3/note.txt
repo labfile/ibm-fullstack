@@ -1,0 +1,1 @@
+convert this checker board to a loop using if and for 
