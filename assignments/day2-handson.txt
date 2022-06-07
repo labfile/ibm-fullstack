@@ -1,0 +1,7 @@
+make a PPT
+----------
+make a list of all block level elements and use them in a demo
+make a list of all inline elements and use them in a demo
+convert the inline elements to block level elements 
+convert the block level elements to inline elements 
+find out differences between block inline and inline-block elements 
