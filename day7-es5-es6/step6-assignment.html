@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 740px;
+            height: 400px;
+            background-color: rgb(96, 96, 96);
+            margin: 10px auto;
+            overflow: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: darkslategray;
+            margin: 10px;
+            float: left;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .container div:hover{
+           cursor: pointer;
+           background-color: rgb(222, 214, 171);
+           box-shadow: 0px 0px 10px;
+        }
+        .container .selectedbox{
+            background-color: darkorange;
+        }
+        
+    </style>
+    <script>
+         function createBox(){
+            var box = document.createElement("div");
+                document.getElementsByClassName("container")[0].appendChild(box);
+        };
+        function changeColorHandler(evt){
+            if(evt.target.getAttribute("class") !== "container"){
+                evt.target.setAttribute("class","selectedbox");
+            }
+        }
+        function init(){
+            for(var i = 0; i < 100; i++){
+                createBox();
+            };
+            document.getElementsByClassName("container")[0].addEventListener("click", changeColorHandler);
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
